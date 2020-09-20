@@ -10,9 +10,6 @@ class Autocompletor:
         self.words_dictionary = {}
         self.stopwords = stopwords.words("english")
 
-        # url = "https://raw.githubusercontent.com/karpathy/char-rnn/master/data/tinyshakespeare/input.txt"
-        # text = requests.get(url).text
-
     def build_dictionary(self, text):
 
         text = text.replace("\n", "").translate(str.maketrans('', '', string.punctuation)).lower()
